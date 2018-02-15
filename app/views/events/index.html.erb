@@ -1,5 +1,6 @@
 <div class="row ">
   <div class="eight columns">
+    <%= page_entries_info @events %>
     <% @events.each do |event| %>
       <card class="event-card">
         <h4><%= event.title %></h4>
@@ -16,6 +17,7 @@
         </div>
       </card>
     <% end %>
+    <%= paginate @events %>
   </div>
   <sidebar class="four columns categories-sb">
     <card class="categories-card">
