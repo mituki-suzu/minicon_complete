@@ -6,6 +6,9 @@ class Admin::EventCategoriesController < Admin::BaseController
     @event_categories = EventCategory.all
   end
   
+  def serch
+  end
+  
   # GET /admin/event_categories/1
   def show
   end

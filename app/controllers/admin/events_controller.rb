@@ -6,6 +6,11 @@ class Admin::EventsController < Admin::BaseController
     @events = Event.all
   end
   
+  def search
+    @events = Event.all
+    render :ingex
+  end
+  
   # GET /admin/events/1
   def show
   end

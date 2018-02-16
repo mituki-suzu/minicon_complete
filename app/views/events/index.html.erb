@@ -30,8 +30,12 @@
     </card>
     <card class="search-card">
       <h4>Search</h4>
-      <input class="u-full-width" type="text">
-      <a class='button button-primary u-full-width'>Search</a>
+      
+      <%= form_tag(events_path, method:"get") do %>
+      <%= text_field_tag :title, params[:title], class:'u-full-width'%>
+      <%= submit_tag "search", class:'button button-primary u-full-width' %>
+      <% end %>
+      
     </card>
   </sidebar>
 </div>
