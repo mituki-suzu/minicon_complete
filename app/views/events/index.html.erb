@@ -23,9 +23,18 @@
     <card class="categories-card">
       <h4>Categories</h4>
       <ul>
-        <li><a>KONKATSU</a></li>
-        <li><a>KOIKATSU</a></li>  
-        <li><a>GOURMET</a></li>
+        <%= form_tag(events_path, method:"get") do %>
+        <li><a name="konkatu", href="../events?utf8=%E2%9C%93&id=1">KONKATSU</a></li>
+        <% end %>
+        
+        <%= form_tag(events_path, method:"get") do %>
+        <li><a name="koikatu", href="../events?utf8=%E2%9C%93&id=2">KOIKATSU</a></li>
+        <% end %>
+        
+        <%= form_tag(events_path, method:"get") do %>
+        <li><a name="gourmet", href="../events?utf8=%E2%9C%93&id=3">GOURMET</a></li>
+        <% end %>
+  
       </ul>
     </card>
     <card class="search-card">
