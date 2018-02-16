@@ -12,18 +12,7 @@ class Event < ApplicationRecord
   end
   
   scope :get_by_title, -> (title){ where("title LIKE ?", "%#{title}%") }
-  
-  # scope :get_by_id1, -> (id){ where("event_category_id = '1'") }
-  
-  # scope :get_by_id2, -> (id){ where("event_category_id = '2'") }
-  
-  # scope :get_by_id3, -> (id){ where("event_category_id = '3'") }
 
   scope :get_by_id, -> (id){ where("event_category_id = ?", id) }
-  
-  # scope :get_by_id2, -> (id){ where("event_category_id = ?", id) }
-  
-  # scope :get_by_id3, -> (id){ where("event_category_id = ?", id) }
-    
   
 end

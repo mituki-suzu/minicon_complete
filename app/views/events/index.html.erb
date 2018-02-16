@@ -23,17 +23,25 @@
     <card class="categories-card">
       <h4>Categories</h4>
       <ul>
+        
         <%= form_tag(events_path, method:"get") do %>
-        <li><a name="konkatu", href="../events?utf8=%E2%9C%93&id=1">KONKATSU</a></li>
+        <li><a name="konkatu", href="../events?id=1">KONKATSU</a></li>
         <% end %>
         
         <%= form_tag(events_path, method:"get") do %>
-        <li><a name="koikatu", href="../events?utf8=%E2%9C%93&id=2">KOIKATSU</a></li>
+        <li><a name="koikatu", href="../events?id=2">KOIKATSU</a></li>
         <% end %>
         
         <%= form_tag(events_path, method:"get") do %>
-        <li><a name="gourmet", href="../events?utf8=%E2%9C%93&id=3">GOURMET</a></li>
+        <li><a name="gourmet", href="../events?id=3">GOURMET</a></li>
         <% end %>
+        
+        
+        <!--<% @categories.each do |categories| %>-->
+        <!--  <%= form_tag(events_path, method:"get") do %>-->
+        <!--  <li><a name=<%= categories.name %>, href="../events?utf8=%E2%9C%93&name=<%= categories.name %>"><%= categories.name %></a></li>-->
+        <!--  <% end %>-->
+        <!--<% end %>-->
   
       </ul>
     </card>
